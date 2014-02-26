@@ -1,0 +1,12 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+<div class='head'>
+	<div><a href="/wiki/">Home</a></div>
+	<div><a href="/wiki/{{ Path }}/edit">Edit</a></div>
+	<div><a href="/wiki/{{ Path }}/history">History</a></div>
+	<div><a href="/wiki/{{ Path }}/discuss">Discuss</a></div>
+</div>
+
+<h1>{{ ArtTitle }}</h1>
+{{ ArtText }}<br>

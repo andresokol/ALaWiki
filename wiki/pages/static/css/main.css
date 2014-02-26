@@ -1,0 +1,13 @@
+body {
+  font-family: Neucha;
+}
+
+div.head div {
+	padding: 5px;
+	display: inline-block;
+}
+
+div.head a {
+	font-size: 12pt;
+	color: black;
+}

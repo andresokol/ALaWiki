@@ -1,0 +1,8 @@
+<h1>{{ ArtTitle }}</h1>
+<form name='text-edit' action="/wiki/{{ Path }}/submit/" method='post'>
+	{% csrf_token %}
+	<input type='text' name='text-field' value='{{ ArtText }}'>
+	<input type='submit' value='Submit'>
+</form>
+
+<a href="/wiki/">HOME</a>

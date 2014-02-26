@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+<H1>Page catalog</H1>
+
+{% if page_list %}
+    <ul>
+    {% for page in page_list %}
+        <li><a href="{% url 'pages:article' page.title %}">{{ page.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No pages are available.</p>
+{% endif %}
+
+<h1>Wanna create new page?</h1>
+<form action='/wiki/create/' method='post'>
+	{% csrf_token %}
+	<input type="text" name="titel">
+	<input type='submit' value='Create'>
+</form>
